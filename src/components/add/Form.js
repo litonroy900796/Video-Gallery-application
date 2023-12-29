@@ -21,6 +21,11 @@ export default function Form() {
         setAuthor("");
         setDescription("");
         setLink("");
+        setThumbnail("");
+        setDate("");
+        setDuration("");
+        setViews("");
+        
 
     }
 
@@ -36,7 +41,7 @@ export default function Form() {
         duration,
         views
       })
-
+      resetForm()
     }
 
     return (
@@ -72,9 +77,9 @@ export default function Form() {
                             <TextInput required value={duration} onChange={(e)=> setDuration(e.target.value)} title="Video Duration" />
                         </div>
 
-                        <div className="col-span-6 sm:col-span-3 lg:col-span-2">
+                    <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                             <TextInput required value={views} onChange={(e)=> setViews(e.target.value)} title="Video no of views" />
-                        </div>
+                    </div>
                     </div>
                 </div>
                 <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
